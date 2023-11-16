@@ -1,0 +1,39 @@
+// Program to count an number
+
+https://www.geeksforgeeks.org/program-count-numbers-fingers/
+
+Input : 17
+Output :1
+
+Input :27
+Output :3
+
+
+
+#include <iostream>
+
+using namespace std;
+int calculate(int n){
+    int c=5;
+    if(n<=5)return n;
+    else{
+       
+        while(c!=n){
+            while(r>1 && c!=n){
+                c++;
+                r--;
+            }
+            while(r<5 && c!=n){
+                c++;
+                r++;
+            }
+        }
+        return r;
+    }
+}
+int main()
+{
+    int n;
+    cin>>n;
+   cout<<calculate(n);
+}
