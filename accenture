@@ -38,9 +38,29 @@ int main()
    cout<<calculate(n);
 }
 
+q2 https://practice.geeksforgeeks.org/problems/sequence-of-sequence1155/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article
+Recursion based sequence of sequence gfg
+Input: m = 10, n = 4
+Output: 4
+Explaination: There should be n elements and 
+value of last element should be at-most m. 
+The sequences are {1, 2, 4, 8}, {1, 2, 4, 9}, 
+{1, 2, 4, 10}, {1, 2, 5, 10}.
+
+code:- 
+class Solution{
+public:
+    int numberSequence(int m, int n){
+        // code here
+        if(m<n)return 0;
+        if(n==0)return 1;
+        return numberSequence(m/2,n-1)+numberSequence(m-1,n);
+    }
+};
 
 
-q2  Input:
+
+q3 Input:
 
 K: 4
 N: 5
